@@ -28,6 +28,7 @@ body {
   padding: 2em;
   background-color: white;
   margin-top: 80px;
+  z-index: -1;
 }
 
 /*
