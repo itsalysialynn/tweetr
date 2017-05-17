@@ -8,7 +8,7 @@
 
 }
 
-h2 {
+.new-tweet h2 {
   text-align: left;
   border-bottom: solid black;
   border-width: 1px;
@@ -24,7 +24,7 @@ textarea {
   padding: 3px;
 }
 
-
+/* adding the red color to the character count when it is exceeded */ 
 .redmax {
     color: red;
 }

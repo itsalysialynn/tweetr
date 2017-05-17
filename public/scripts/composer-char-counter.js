@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  $('textarea').on('keyup', function() {
+  $('textarea').on('input', function() {
     var max = 140;
     var length =  max-($(this).val().length);
     $(this).parent().find('.counter').text(length);
