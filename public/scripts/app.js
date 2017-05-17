@@ -1,13 +1,13 @@
 function renderTweets(tweets) {
   var $tweetContainer = $('#tweets');
-  for (var ii = 0; ii < tweets.length; ii++) {
-    let tweet = tweets[ii];
-    $tweetContainer.append(createTweetElement(tweet));
-  }
+  $tweetContainer.empty();
+  tweets.forEach(function(tweet) {
+    $tweetContainer.prepend(createTweetElement(tweet));
+  });
 }
 
 function createTweetElement(tweet) {
-  const html = `
+  var html = `
    <article>
       <header>
         <h3>${tweet.user.handle}</h3>
@@ -24,12 +24,12 @@ function createTweetElement(tweet) {
 }
 
 
- $('form').submit(function(evt) {
+$('form').submit(function(evt) {
   evt.preventDefault();
-  let text = $('textarea').val();
+  var text = $('textarea').val();
   if (text.length === 0) {
     alert('Please fill in the field');
-  } else if (text.length > 141) {
+  } else if (text.length > 140) {
     alert('Character limit exceeded');
   } else {
     var formStuff = $( this ).serialize();
@@ -42,19 +42,27 @@ function loadTweets() {
     url: '/tweets',
     type: 'GET',
     dataType: 'json',
-    success: renderTweets
+    success: function (data) {
+      renderTweets(data);
+    }
   });
 }
 
-function createNewTweet (data) {
+function createNewTweet(data) {
 
   $.ajax({
      url: '/tweets',
      type: 'POST',
-     dataType: 'json',
      data: data,
      success: loadTweets
    });
 }
 
 loadTweets();
+
+$(".new-tweet").hide();
+
+$("button").click(function() {
+  $(".new-tweet").slideToggle()
+  $('textarea').focus();
+});

@@ -22,3 +22,22 @@
     line-height: 80px;
     
 }
+
+[type="button"] {
+    background-color: #e7fdff;
+    color: #009f86;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 1px;
+    font-size: 50%;
+    height: 50px;
+    width: 100px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 2em;
+}
+
+[type="button"]:hover {
+    background-color: white;
+    color: black;
+}
