@@ -4,13 +4,13 @@ $( document ).ready(function() {
     var html = `
     <article>
         <header>
-          <h3>${tweet.user.handle}</h3>
+          <h3>${escape(tweet.user.handle)}</h3>
           <img class="avatar" src="${tweet.user.avatars.regular}">
-          <h2>${tweet.user.name}</h2>
+          <h2>${escape(tweet.user.name)}</h2>
         </header>
-        <p>${tweet.content.text} </p>
+        <p>${escape (tweet.content.text)} </p>
         <footer>
-          <p>${new Date(tweet.created_at)}
+          <p>${moment(tweet.created_at).startOf('hour').fromNow()}</p>
         </footer>
       </article>
   `;
@@ -60,6 +60,7 @@ $( document ).ready(function() {
     } else {
       var formStuff = $( this ).serialize();
       createNewTweet(formStuff);
+      $('textarea').val('');
     }
   });
 
@@ -71,4 +72,10 @@ $( document ).ready(function() {
     $('textarea').focus();
     $("body").scrollTop(0);
   });
+
+  function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 });

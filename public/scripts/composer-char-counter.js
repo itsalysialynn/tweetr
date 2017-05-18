@@ -9,5 +9,8 @@ $( document ).ready(function() {
     } else {
       counter.removeClass('redmax');
     }
+    $("input").on("click", function(){
+    $('.counter').text('140');
   });
+});
 });
