@@ -1,8 +1,3 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
   box-sizing: border-box;
 }
@@ -10,49 +5,46 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
+/* Global layout */
 body {
-  font-family: 'Roboto Condensed', sans-serif;
-  margin: 0;
-  color: #244751;
   background-color: #eee;
+  color: #244751;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .container {
-  max-width: 450px;
-  background-color: eee;
-  margin: 0 auto;
-  padding: 2em;
   background-color: white;
+  margin: 0 auto;
+  max-width: 450px;
   margin-top: 80px;
-  z-index: -1;
-  margin-bottom: 80px;
+  padding: 2em;  
 }
 
-/*
- * All the CSS Elements for the Tweets that are displayed
- */
+/* All the CSS Elements for the Tweets that are displayed */
 #tweets {
-  border-radius: 5px;
-  border: 1px solid #d3d3d3;
   margin-top: 20px;
-  opacity: .75;
+  opacity: .75; 
 }
 
 #tweets:hover {
   opacity: 1;
 }
 
-.avatar {
-  max-width: 50px;
-  float: left;
+ /* Styling for each tweet */
+ article {
+  border: 1px solid #d3d3d3;
   border-radius: 5px;
+  margin-top: 10px
+ }
+
+.avatar {
+  border-radius: 5px;
+  float: left;
   margin: 10px;
+  max-width: 50px;
 }
-/* . Name displayed */
+
+/* Name displayed */
  #tweets header h2 {
    background-color: #f3f3f3;
    height: 70px;
@@ -60,31 +52,33 @@ body {
    padding-top: 10px;
  }
 
+/* Handle displayed */
+ #tweets header h3 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 90%;
+  font-weight: normal;
+  margin: 0;
+  padding-right: 10px;
+  padding-top: 10px;
+ }
+
+/* Tweet displayed */
 #tweets article > p {
   height: 60px;
+  margin: 0;
   padding-left: 10px;
   padding-top: 30px;
-  margin: 0;
 }
-
- #tweets header h3 {
-  float: right;
-  clear: both;
-  padding-right: 10px;
-  color: #aaaaaa;
-  padding-top: 10px;
-  margin: 0;
-  font-weight: normal;
-  font-size: 90%;
- }
-
- #tweets footer p {
-   border-top: 1px solid #d3d3d3;
-   padding-left: 10px;
-   padding-top: 10px;
-   font-size: 80%;
- }
 
 #tweets footer {
    background-color: #ffffff;  
+   border-radius: 5px;
  }
+ 
+/* Creation date displayed */
+ #tweets footer p {
+   border-top: 1px solid #d3d3d3;
+   font-size: 80%;
+   padding-left: 10px;
+   padding-top: 10px;

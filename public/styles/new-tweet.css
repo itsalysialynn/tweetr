@@ -1,45 +1,45 @@
 .new-tweet {
   background-color: #eeeeee;
-  border-radius: 5px;
-  border-color: black;
-  border-width: 20px;
-  padding: 8px;
   border: 1px solid #d3d3d3;
-
+  border-radius: 5px;
+  padding: 8px;
 }
 
+/* "Compose Tweet" text */
 .new-tweet h2 {
-  text-align: left;
   border-bottom: solid black;
   border-width: 1px;
+  text-align: left;
 }
 
 .counter {
-  margin-left: 280px;
   font-style: italic;
+  margin-left: 280px;
 }
 
-textarea {
-  width: 100%;
-  padding: 3px;
-}
-
-/* adding the red color to the character count when it is exceeded */ 
+/* character counter when limit is exceeded */ 
 .redmax {
     color: red;
 }
 
+/* Text area to enter tweet */ 
+textarea {
+  padding: 3px;
+  width: 100%;
+}
+
+/* "Tweet" a.k.a the submit button */ 
 [type="button"] {
   background-color: #e7fdff;
-  color: #009f86;
-  border-radius: 5px;
   border-color: black;
+  border-radius: 5px;
   border-width: 1px;
+  color: #009f86;
+  float: right;
   font-size: 50%;
   height: 50px;
-  width: 100px;
-  float: right;
   margin-top: 15px;
+  width: 100px;
 }
 
 [type="button"]:hover {
