@@ -15,8 +15,8 @@ body {
 .container {
   background-color: white;
   margin: 0 auto;
-  max-width: 450px;
   margin-top: 80px;
+  max-width: 450px;
   padding: 2em;  
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 #tweets:hover {
-  opacity: 1;
+  opacity: 2;
 }
 
  /* Styling for each tweet */
