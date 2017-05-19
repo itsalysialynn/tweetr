@@ -1,24 +1,36 @@
 #nav-bar {
-    background-color: #00b9be;
-    font-size: 200%;
-    left: 0;
-    padding-left: 2em;
-    padding-right: 2em;
-    position: fixed;
-    right: 0;
-    top: 0;    
-    z-index: 3; 
-    opacity: .70;
+  background-color: #00b9be;
+  font-size: 200%;
+  left: 0;
+  opacity: .70;
+  padding-left: 2em;
+  padding-right: 2em;
+  position: fixed;
+  right: 0;
+  top: 0;    
+  z-index: 3;    
 }
 
 /* Logo Text */
 #nav-bar .header {
-    color: whitesmoke;
-    float: left;
-    line-height: 80px;  
-    font-size: 80%;
-    letter-spacing: 3px;
-    font-style: normal;
-    z-index: 4; 
+  color: whitesmoke;
+  font-size: 80%;
+  letter-spacing: 3px;
+  line-height: 70px; 
 }
 
+/* Compose button */ 
+[type="button"] {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  border-width: 0px;
+  color: #00b9be;
+  float: right;
+  font-size: 48%;
+  margin-top: 22px;
+  width: 80px;
+}
+
+[type="button"]:hover {
+  opacity: .80;
+}

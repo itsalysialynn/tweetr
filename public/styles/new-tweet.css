@@ -2,7 +2,8 @@
   background-color: #f6f6f6;
   border: 1px solid #e1e1e1;
   border-radius: 5px;
-  padding: 8px;
+  height: 169px;
+  padding: 11px;
 }
 
 /* "Compose Tweet" text */
@@ -10,59 +11,55 @@
   border-bottom: solid #e1e1e1;
   border-width: .5px;
   color: #6d6b6b;
-  text-align: left;
-  font-size: 100%;
+  font-size: 112%;
   letter-spacing: 1px;
+  text-align: left;
 }
 
 .counter {
+  float: right;
   font-style: italic;
-  margin-left: 280px;
 }
 
 /* character counter when limit is exceeded */ 
 .redmax {
-    color: red;
+  color: red;
 }
 
 /* Text area to enter tweet */ 
 textarea {
-  padding: 3px;
-  width: 100%;
-  background-color: white;
+  background-color: white;;
   border-width: 0px;
-  border-color: #e1e1e1;
   color: #9b9b9b;
   font-size: 90%;
-}
-
-/* Compose button */ 
-[type="button"] {
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  border-width: 0px;
-  color: #00b9be;
-  float: right;
-  font-size: 48%;
-  height: 25px;
-  margin-top: 27px;
-  width: 80px;
-}
-
-[type="button"]:hover {
-  opacity: .80;
+  height: 55px;
+  width: 100%;
 }
 
 /* "Tweet" a.k.a the submit button */ 
 [type="submit"] {
-    background-color: white;
-    color: #9b9b9b;
-    border-width: 0px;
-    border-radius: 5px;
-    font-size: 90%;
+  background-color: white;
+  border-radius: 5px;
+  border-width: 0px;
+  color: #9b9b9b; 
+  font-size: 90%;
+  margin-right: 5px;
 }
 
 [type="submit"]:hover {
-    background-color: #9b9b9b;
-    color: white;
+  background-color: #9b9b9b;
+  color: white;
+}
+
+/* Slide down error message */
+.errors p {
+  color: #00b9be;
+  display: none;
+  font-size: 90%;
+  font-weight: 300;
+  margin: 0;
+}
+
+.errors {
+  display: inline-block;
 }

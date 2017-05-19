@@ -1,14 +1,20 @@
 html {
   box-sizing: border-box;
-  
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+@media screen and (max-width: 48rem) {
+  .container .col {
+    width: 95%;
+  }
+}
+
 /* Global layout */
+/* Background pattern from Subtle Patterns */
 body {
-  /* Background pattern from Subtle Patterns */
   background-image: url(/images/background.png);
   color: #5dcdd1;
   font-family: 'Source Sans Pro', sans-serif;
@@ -17,24 +23,24 @@ body {
 .container {
   background-color: white;
   margin: 0 auto;
-  margin-top: 80px;
-  max-width: 450px;
+  margin-top: 71px;
+  max-width: 500px;
   padding: 2em;  
 }
 
 /* All the CSS Elements for the Tweets that are displayed */
 #tweets {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
- /* Styling for each tweet */
- article {
+/* Styling for each tweet */
+article {
   border: 1px solid #d3d3d3;
-  margin-top: 10px;
   border-radius: 5px;
- }
+  margin-top: 10px;
+}
 
- article:hover {
+article:hover {
   opacity: .85; ;
 }
 
@@ -47,75 +53,73 @@ body {
 }
 
 /* Name displayed */
- #tweets header h2 {
-   background-color: #f3f3f3;
-   color: #5dcdd1;
-   height: 70px;
-   margin: 0;
-   padding-top: 10px;
-   font-size: 120%;
-   font-weight: normal;
- }
+#tweets header h2 {
+  background-color: #f3f3f3;
+  color: #5dcdd1;
+  font-size: 120%;
+  font-weight: normal;
+  height: 70px;
+  margin: 0;
+  padding-top: 10px;
+}
 
 /* Handle displayed */
- #tweets header h3 {
+#tweets header h3 {
   color: #aaaaaa;
   float: right;
   font-size: 85%;
+  font-weight: lighter;
   margin: 0;
   padding-right: 10px;
   padding-top: 10px;
-  font-weight: lighter;
- }
+}
 
 /* Tweet displayed */
 #tweets article > p {
+  color: #9b9b9b;
   height: 60px;
   margin: 0;
   padding-left: 10px;
   padding-top: 30px;
-  color: #9b9b9b;
 }
 
-#tweets footer {
-   background-color: #aaaaa;  
- }
- 
 /* Creation date displayed */
- #tweets footer p {
-   border-top: 1px solid #d3d3d3;
-   font-size: 80%;
-   padding-left: 10px;
-   padding-top: 10px;
-   color: #9b9b9b;;
- }
-
-#my-footer {
-  margin-left: 10px;
-  height: 20px;
+#tweets footer p {
+  border-top: 1px solid #d3d3d3;
+  color: #9b9b9b;
+  font-size: 80%;
+  padding-left: 10px;
+  padding-top: 10px;
 }
-
 
 /* Icons */
-
-#heart {
+.icon {
   height: 14px;
   float: right;
   margin-top: 12px;
   margin-right: 6px;
+  opacity: 0;
 }
-#retwitt {
-  height: 13px;
+
+article:hover .icon {
+  opacity: 1;
+}
+
+.flag-icon {
+  height: 17px;
   float: right;
   margin-top: 12px;
   margin-right: 6px;
+  opacity: 0;
 }
 
-#flag {
-  height: 14px;
-  float: right;
-  margin-top: 12px;
-  margin-right: 10px;
-  z-index: 2;
+article:hover .flag-icon {
+  opacity: 1;
 }
 
+/* Footer text */
+#my-footer {
+  margin-left: 10px;
+  right: 0;
+  top: 0; 
+}

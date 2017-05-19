@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <!-- Meta Information -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tweeter - Home Page</title>
 
   <!-- External CSS -->
@@ -29,9 +30,14 @@
       <form action="/tweets/" method="POST">
       <textarea name="text" placeholder="What are you humming about?"></textarea>
       <input type="submit" value="TWEET">
+       <div class="errors">
+        <p id="empty-tweet">Your tweet cannot be blank!</p>
+        <p id="excessive-tweet">Character limit exceeded!</p>
+      </div>
       <span class="counter">140</span>
       </form>
     </section>
+   
     <section id="tweets">
     </section>
   </main>
