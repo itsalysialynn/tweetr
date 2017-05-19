@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -7,9 +8,10 @@ html {
 
 /* Global layout */
 body {
-  background-color: #eee;
-  color: #244751;
-  font-family: 'Roboto Condensed', sans-serif;
+  /* Background pattern from Subtle Patterns */
+  background-image: url(/images/background.png);
+  color: #5dcdd1;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .container {
@@ -23,44 +25,47 @@ body {
 /* All the CSS Elements for the Tweets that are displayed */
 #tweets {
   margin-top: 20px;
-  opacity: .75; 
-}
-
-#tweets:hover {
-  opacity: 2;
 }
 
  /* Styling for each tweet */
  article {
   border: 1px solid #d3d3d3;
-  border-radius: 5px;
   margin-top: 10px;
+  border-radius: 5px;
  }
+
+ article:hover {
+  opacity: .85; ;
+}
 
 .avatar {
   border-radius: 5px;
   float: left;
   margin: 10px;
   max-width: 50px;
+  opacity: .60;
 }
 
 /* Name displayed */
  #tweets header h2 {
    background-color: #f3f3f3;
+   color: #5dcdd1;
    height: 70px;
    margin: 0;
    padding-top: 10px;
+   font-size: 120%;
+   font-weight: normal;
  }
 
 /* Handle displayed */
  #tweets header h3 {
   color: #aaaaaa;
   float: right;
-  font-size: 90%;
-  font-weight: normal;
+  font-size: 85%;
   margin: 0;
   padding-right: 10px;
   padding-top: 10px;
+  font-weight: lighter;
  }
 
 /* Tweet displayed */
@@ -69,11 +74,11 @@ body {
   margin: 0;
   padding-left: 10px;
   padding-top: 30px;
+  color: #9b9b9b;
 }
 
 #tweets footer {
-   background-color: #ffffff;  
-   border-radius: 5px;
+   background-color: #aaaaa;  
  }
  
 /* Creation date displayed */
@@ -82,3 +87,35 @@ body {
    font-size: 80%;
    padding-left: 10px;
    padding-top: 10px;
+   color: #9b9b9b;;
+ }
+
+#my-footer {
+  margin-left: 10px;
+  height: 20px;
+}
+
+
+/* Icons */
+
+#heart {
+  height: 14px;
+  float: right;
+  margin-top: 12px;
+  margin-right: 6px;
+}
+#retwitt {
+  height: 13px;
+  float: right;
+  margin-top: 12px;
+  margin-right: 6px;
+}
+
+#flag {
+  height: 14px;
+  float: right;
+  margin-top: 12px;
+  margin-right: 10px;
+  z-index: 2;
+}
+

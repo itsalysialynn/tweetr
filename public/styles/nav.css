@@ -1,6 +1,5 @@
 #nav-bar {
-    background-color: #00a087;
-    color: #e8fdff;
+    background-color: #00b9be;
     font-size: 200%;
     left: 0;
     padding-left: 2em;
@@ -9,36 +8,17 @@
     right: 0;
     top: 0;    
     z-index: 3; 
+    opacity: .70;
 }
 
 /* Logo Text */
 #nav-bar .header {
+    color: whitesmoke;
     float: left;
     line-height: 80px;  
+    font-size: 80%;
+    letter-spacing: 3px;
+    font-style: normal;
+    z-index: 4; 
 }
 
-/* Logo Image */
-#nav-bar .logo {
-    float: left;
-    height: 80px;
-    padding-right: 10px; 
-}
-
-/* Compose button */
-[type="button"] {
-    background-color: #e7fdff;
-    border-color: black;
-    border-radius: 5px;
-    border-width: 1px;
-    color: #009f86;
-    float: right;
-    font-size: 50%;
-    height: 50px;    
-    margin-right: 2em;
-    width: 100px;
-}
-
-[type="button"]:hover {
-    background-color: white;
-    color: black;
-}

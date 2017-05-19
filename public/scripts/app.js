@@ -10,6 +10,9 @@ $( document ).ready(function() {
         </header>
         <p>${escape (tweet.content.text)} </p>
         <footer>
+          <img id=flag src="images/flag-icon.png">
+          <img id=retwitt src="images/retwitt-icon.png">
+          <img id=heart src="images/heart-icon.png">
           <p>${moment(tweet.created_at).startOf('hour').fromNow()}</p>
         </footer>
       </article>
