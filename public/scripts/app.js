@@ -79,13 +79,12 @@ $(document).ready(function() {
     }
   });
 
-  //hiding the compose form
+   //hiding the compose form
   $(".new-tweet").hide();
-
   //toggles the compose form when the 'compose' button is clicked and scrolls to the top
-  $('.new-tweet-toggle').click(function() {
-    $('.new-tweet').slideToggle();
-    $('.new-tweet textarea').focus();
-    $('body').scrollTop(0);
+  $("button").click(function() {
+    $(".new-tweet").slideToggle();
+    $('textarea').focus();
+    $("body").scrollTop(0);
   });
 });
