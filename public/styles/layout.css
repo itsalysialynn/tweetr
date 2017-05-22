@@ -81,10 +81,10 @@ article:hover {
 
 #tweets article>p {
 	color: #9b9b9b;
-	height: 60px;
+	height: 67px;
 	margin: 0;
-	padding-left: 10px;
-	padding-top: 30px;
+	word-wrap: break-word;
+	padding: 10px;
 }
 
 /* Creation date displayed */
