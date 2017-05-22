@@ -12,6 +12,7 @@
 }
 
 /* Logo Text */
+
 #nav-bar .header {
   color: whitesmoke;
   font-size: 80%;
@@ -20,6 +21,7 @@
 }
 
 /* Compose button */ 
+
 [type="button"] {
   background-color: #f4f4f4;
   border-radius: 5px;
