@@ -1,6 +1,6 @@
 $(document).ready(function() {
   function escape(str) {
-    var div = document.createElement('div');
+    var div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
@@ -19,16 +19,16 @@ $(document).ready(function() {
           <img class=icon src="images/heart-icon.png">
           <img class=icon src="images/retwitt-icon.png">
           <img class=flag-icon src="images/flag-icon.png">
-          <p>${moment(tweet.created_at).startOf('hour').fromNow()}</p>
+          <p>${moment(tweet.created_at).startOf("hour").fromNow()}</p>
         </footer>
       </article>
   `;
     return html;
   }
 
-   //loops throught he tweets and calls on createTweetElement function for each
+  //loops throught he tweets and calls on createTweetElement function for each
   function renderTweets(tweets) {
-    var $tweetContainer = $('#tweets');
+    var $tweetContainer = $("#tweets");
     $tweetContainer.empty();
     for (var index = 0; index < tweets.length; index++) {
       let tweet = tweets[index];
@@ -40,10 +40,10 @@ $(document).ready(function() {
   //if successful
   function loadTweets() {
     $.ajax({
-      url: '/tweets',
-      type: 'GET',
-      dataType: 'json',
-      success: function (data) {
+      url: "/tweets",
+      type: "GET",
+      dataType: "json",
+      success: function(data) {
         renderTweets(data);
       }
     });
@@ -55,36 +55,40 @@ $(document).ready(function() {
   //function if successful
   function createNewTweet(data) {
     $.ajax({
-      url: '/tweets',
-      type: 'POST',
+      url: "/tweets",
+      type: "POST",
       data: data,
-      success: function serverSuccess () {
+      success: function serverSuccess() {
         loadTweets();
-        $('.new-tweet textarea').val('').closest('.new-tweet').find('.counter').text(140);
+        $(".new-tweet textarea")
+          .val("")
+          .closest(".new-tweet")
+          .find(".counter")
+          .text(140);
       }
     });
   }
 
   //error alerts and calls on createNewTweet function
-  var $form = $('form').submit(function(evt) {
+  var $form = $("form").submit(function(evt) {
     evt.preventDefault();
-    var text = $('textarea').val();
+    var text = $("textarea").val();
     if (text.length === 0) {
-      $('#empty-tweet').slideDown('fast');
+      $("#empty-tweet").slideDown("fast");
     } else if (text.length > 140) {
-      $('#excessive-tweet').slideDown('fast');
+      $("#excessive-tweet").slideDown("fast");
     } else {
-      var formData = $( this ).serialize();
+      var formData = $(this).serialize();
       createNewTweet(formData);
     }
   });
 
-   //hiding the compose form
+  //hiding the compose form
   $(".new-tweet").hide();
   //toggles the compose form when the 'compose' button is clicked and scrolls to the top
   $("button").click(function() {
     $(".new-tweet").slideToggle();
-    $('textarea').focus();
+    $("textarea").focus();
     $("body").scrollTop(0);
   });
 });
